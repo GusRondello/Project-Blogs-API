@@ -34,7 +34,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-    });
+    }, { timestamps: false });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('BlogPosts');
