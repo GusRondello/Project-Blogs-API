@@ -24,7 +24,7 @@ const userController = {
     delete: async (req, res) => {
         const { data: { id } } = jwtMiddleware.validateToken(req.headers.authorization);
         await userService.delete(id);
-        res.status(204);
+        res.sendStatus(204);
     },
 };
 
