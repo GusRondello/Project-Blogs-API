@@ -4,7 +4,7 @@ const errorsMiddleware = (err, _req, res, _next) => {
         case 'ValidationError':
             res.status(400).json({ message });
             break;
-        case 'NotFoudError':
+        case 'NotFoundError':
             res.status(404).json({ message });
             break;
         case 'ConflictError':
